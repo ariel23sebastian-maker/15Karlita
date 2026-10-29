@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf6f0">
+  <meta name="description" content="Acompáñanos a celebrar los quince años de Karlita.">
+  <title>Mis quince años | Karitla</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="invitacion">
+  <svg class="recursos-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="flor" viewBox="-50 -50 100 100">
+      <g fill="#f2d5d8" stroke="#d5a0a9" stroke-width="1">
+        <ellipse cx="0" cy="-22" rx="13" ry="22"/>
+        <ellipse cx="0" cy="-22" rx="13" ry="22" transform="rotate(72)"/>
+        <ellipse cx="0" cy="-22" rx="13" ry="22" transform="rotate(144)"/>
+        <ellipse cx="0" cy="-22" rx="13" ry="22" transform="rotate(216)"/>
+        <ellipse cx="0" cy="-22" rx="13" ry="22" transform="rotate(288)"/>
+      </g>
+      <circle r="7" fill="#dfc28b"/>
+    </symbol>
+  </svg>
+
+  <section id="portada" class="portada" aria-label="Portada de la invitación">
+    <div class="portada-luz" aria-hidden="true"></div>
+    <svg class="flor f1" aria-hidden="true"><use href="#flor"/></svg>
+    <svg class="flor f2" aria-hidden="true"><use href="#flor"/></svg>
+
+    <p class="sobre-etiqueta">Una invitación especial para ti</p>
+
+    <div class="sobre" id="sobre">
+      <div class="sobre-carta" aria-hidden="true">
+        <span class="carta-inicial" data-inicial>K</span>
+      </div>
+      <div class="sobre-frente" aria-hidden="true"></div>
+      <div class="sobre-solapa" aria-hidden="true"></div>
+      <button class="sello" id="abrir" type="button" aria-label="Abrir invitación">
+        <span>Abrir</span>
+        <span class="sello-inicial" data-inicial>K</span>
+      </button>
+    </div>
+
+    <p class="portada-pretexto">Con cariño te invito a celebrar</p>
+    <h1 class="nombre-portada" data-quinceanera>Karlita</h1>
+    <p class="sub-portada">Mis quince años</p>
+    <span class="ornamento" aria-hidden="true">✧ &nbsp; ❀ &nbsp; ✧</span>
+    <p class="portada-instruccion">Pulsa el sello para descubrir tu invitación</p>
+  </section>
+
+  <main id="contenido" class="contenido" hidden>
+    <header class="hero">
+      <div class="hero-marco">
+        <svg class="flor f1" aria-hidden="true"><use href="#flor"/></svg>
+        <svg class="flor f2" aria-hidden="true"><use href="#flor"/></svg>
+
+        <p class="sobre-etiqueta">Un día para recordar</p>
+        <p class="padres" id="padres"></p>
+        <p class="linea">tienen el honor de invitar a celebrar sus padres</p>
+        <h1 class="titulo">Vicente Vera </h1>
+        <h1 class="titulo">Y</h1>
+        <h1 class="titulo">Mery Mendoza</h1>
+        
+        
+        <div class="separador-ornamental" aria-hidden="true">✦ ───── ❀ ───── ✦</div>
+        <p class="saludo" id="saludo" aria-live="polite"></p>
+        <p class="hero-cierre"></p>
+      </div>
+    </header>
+
+    <section class="bloque fecha" aria-labelledby="t-fecha">
+      <span class="numero-seccion">I</span>
+      <p class="sobre-etiqueta">Una fecha inolvidable</p>
+      <h2 id="t-fecha">Reserva este día</h2>
+      <div class="fecha-marco">
+        <p class="fecha-grande">
+          <span id="dia-semana"></span>
+          <strong id="dia-num"></strong>
+          <span id="mes-anio"></span>
+        </p>
+        <span class="separador-ornamental" aria-hidden="true">✧</span>
+        <p class="hora" id="hora"></p>
+      </div>
+
+      <p class="cuenta-titulo">La cuenta regresiva ha comenzado</p>
+      <div class="cuenta" id="cuenta" role="timer" aria-label="Tiempo restante para la celebración">
+        <div><b id="c-d">0</b><span>días</span></div>
+        <div><b id="c-h">0</b><span>horas</span></div>
+        <div><b id="c-m">0</b><span>minutos</span></div>
+        <div><b id="c-s">0</b><span>segundos</span></div>
+      </div>
+      <p class="cuenta-fin" id="cuenta-fin" hidden>¡Hoy es el gran día!</p>
+      <p class="evento-pasado" id="evento-pasado" hidden>Gracias por formar parte de este recuerdo.</p>
+    </section>
+
+    <section class="bloque lugar" aria-labelledby="t-lugar">
+      <span class="numero-seccion">II</span>
+      <p class="sobre-etiqueta">Nos encontraremos en</p>
+      <h2 id="t-lugar">El lugar de la celebración</h2>
+      <div class="icono-lugar" aria-hidden="true">✧</div>
+      <p class="lugar-nombre" id="lugar-nombre"></p>
+      <p class="lugar-direccion" id="lugar-dir"></p>
+      <h2 id="t-lugar">17:00h</h2>
+      <a class="boton" id="maps" target="_blank" rel="noopener noreferrer">
+        <span aria-hidden="true">⌖</span> Cómo llegar
+      </a>
+    </section>
+
+    
+<section class="bloque programa" aria-labelledby="t-prog">
+  <span class="numero-seccion">III</span>
+  <p class="sobre-etiqueta">Un detalle especial</p>
+  <h2 id="t-prog">Obsequio</h2>
+  <div id="programa"></div>
+</section>
+
+
+    <section class="bloque vestimenta" aria-labelledby="t-vest">
+  <span class="numero-seccion">IV</span>
+  <p class="sobre-etiqueta">Una ocasión especial</p>
+  <h2 id="t-vest">Código de vestimenta</h2>
+  <p class="lugar-nombre" id="vest-titulo"></p>
+</section>
+
+    <section class="bloque rsvp" aria-labelledby="t-rsvp">
+      <span class="numero-seccion">V</span>
+      <p class="sobre-etiqueta"></p>
+      <h2 id="t-rsvp">¿Nos acompañas?</h2>
+      <p id="rsvp-texto"></p>
+      <a class="boton boton-sello" id="whatsapp" target="_blank" rel="noopener noreferrer">
+        Confirmar asistencia por WhatsApp
+      </a>
+      <p class="rsvp-nota">Agradecemos mucho que nos confirmes tu asistencia.</p>
+    </section>
+
+    <footer class="final">
+      <span class="separador-ornamental" aria-hidden="true">✧ ───── ❀ ───── ✧</span>
+      <p class="gracias">Gracias</p>
+      <p>Tu presencia hará de este día un recuerdo inolvidable.</p>
+      <p class="firma" data-quinceanera>Karlita</p>
+      <p class="final-fecha"> <span id="anio-final"></span></p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

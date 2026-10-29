@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#fbf6f0">
+  <title>Generador de invitaciones</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin">
+  <main class="panel">
+    <header class="panel-header">
+      <span class="panel-ornamento" aria-hidden="true">✧</span>
+      <p class="sobre-etiqueta">Celebración especial</p>
+      <h1>Generador de invitaciones</h1>
+      <p class="panel-descripcion">Crea un enlace único para personalizar el saludo de cada invitado.</p>
+    </header>
+
+    <div class="aviso">
+      <strong>Importante</strong>
+      <p>Los nombres no se guardan. Este panel no tiene contraseña: cualquier persona que conozca su dirección podrá abrirlo.</p>
+    </div>
+
+    <p class="aviso aviso-error" id="aviso-base" hidden></p> 
+
+    <form id="form">
+      <label for="nombre">Nombre del invitado</label>
+      <input id="nombre" name="nombre" type="text" maxlength="60" autocomplete="off" placeholder="Ej. Valentina" required>
+      <p class="error" id="error" role="alert"></p>
+      <button class="boton boton-ancho" type="submit">Generar invitación <span aria-hidden="true">↗</span></button>
+    </form>
+
+    <section id="resultado" class="resultado" hidden aria-labelledby="t-res">
+      <div class="resultado-encabezado">
+        <span class="resultado-icono" aria-hidden="true">✓</span>
+        <h2 id="t-res">Tu invitación está lista</h2>
+        <p>El enlace mostrará el nombre que acabas de introducir.</p>
+      </div>
+
+      <label for="enlace">Enlace personalizado</label>
+      <input id="enlace" type="text" readonly spellcheck="false">
+
+      <div class="acciones">
+        <button class="boton" type="button" id="copiar">Copiar enlace</button>
+        <a class="boton boton-sec" id="compartir" target="_blank" rel="noopener noreferrer">Enviar por WhatsApp</a>
+        <button class="boton boton-ter" type="button" id="nuevo">Crear otro enlace</button>
+      </div>
+
+      <p class="estado" id="estado" role="status" aria-live="polite"></p>
+
+      <div class="vista-contenedor">
+        <p class="sobre-etiqueta">Vista previa</p>
+        <p class="saludo vista" id="vista"></p>
+        <p class="vista-firma">Con cariño, Karla</p>
+      </div>
+    </section>
+
+    <footer class="panel-footer">
+      <span aria-hidden="true">✧</span>
+      <p>Una invitación, un recuerdo para siempre.</p>
+      <a href="./">Ver invitación principal</a>
+    </footer>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>
